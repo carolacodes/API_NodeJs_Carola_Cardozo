@@ -3,13 +3,13 @@ import { userController } from "./controller";
 
 const userRouter = express.Router();
 
-const {getUsers, getUser, createUser, login, deleteUser, updateUser} = userController; //importamos los controladores
+const {getUsers, getUser, createUser, loginUser, deleteUser, editUser} = userController; //importamos los controladores
 
 userRouter.get("/", getUsers);
 userRouter.get("/:id", getUser);
 userRouter.post("/register", createUser);
-userRouter.post("/login", login);
+userRouter.post("/login", loginUser);
 userRouter.delete("/deleteUser/:id", deleteUser);
-userRouter.put("editUser/:id", updateUser);
+userRouter.put("editUser/:id", editUser);
 
 export default userRouter;

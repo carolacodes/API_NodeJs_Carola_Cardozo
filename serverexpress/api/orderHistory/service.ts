@@ -17,7 +17,7 @@ class OrderService {
 
     async getOrderById(id: string){
         try {
-            const order = await this.getOrderById(id);
+            const order = await getOrderById(id);
             return order;
         } catch (error){
             throw Error((error as Error).message);
